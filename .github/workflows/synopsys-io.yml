@@ -27,8 +27,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
     - name: Software Composition Analysis with Black Duck
-      if: ${{steps.prescription.outputs.scaScan == 'true' }}
-      uses: blackducksoftware/github-action@9ea442b34409737f64743781e9adc71fd8e17d38
+      uses: blackducksoftware/github-action@2.0.0
       with:
          args: '--blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_TOKEN}}" --detect.tools="SIGNATURE_SCAN,DETECTOR"'
 
