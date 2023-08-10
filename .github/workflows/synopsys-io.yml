@@ -29,10 +29,10 @@ jobs:
     - name: Detect Rapid Scan Action
       uses: synopsys-sig/detect-action@v0.3.4
       with:
-          github-token: ${{ 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 }}
+          github-token: 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
           detect-version: 7.9.0
-          blackduck-url: ${{ https://ec2-18-224-20-246.us-east-2.compute.amazonaws.com }}
-          blackduck-api-token: ${{ MWQ5NjViMDgtMzNhYi00N2Q4LTkyMTAtMzU2ZTA5OGJlYTg2OmZlYTRlNDc1LWUyYTktNDEwNi1iYmM1LTcxM2Y4NmYzNDE1ZA== }}
+          blackduck-url: https://ec2-18-224-20-246.us-east-2.compute.amazonaws.com
+          blackduck-api-token: MWQ5NjViMDgtMzNhYi00N2Q4LTkyMTAtMzU2ZTA5OGJlYTg2OmZlYTRlNDc1LWUyYTktNDEwNi1iYmM1LTcxM2Y4NmYzNDE1ZA==
     - name: Software Composition Analysis with Black Duck
       if: ${{steps.prescription.outputs.scaScan == 'true' }}
       uses: blackducksoftware/github-action@9ea442b34409737f64743781e9adc71fd8e17d38
