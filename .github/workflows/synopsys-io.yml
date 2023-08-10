@@ -23,7 +23,7 @@ jobs:
       # Runs a Black Duck intelligent scan manually
       # This will run a "full" or "intelligent" scan, logging new components in the Black Duck Hub server
       # in order to provide real time notifications when new vulnerabilities are reported.
-      -- name: Run Baseline Black Duck Scan (manual, workflow dispatch)
+      - name: Run Baseline Black Duck Scan (manual, workflow dispatch)
         if: ${{github.event_name == 'workflow_dispatch'}}
         uses: synopsys-sig-community/blackduck-direct-scan-action@v1
         with:
