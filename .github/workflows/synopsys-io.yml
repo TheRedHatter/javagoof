@@ -18,7 +18,7 @@ jobs:
       steps:
       
       - name: Checkout the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         
       # Runs a Black Duck intelligent scan manually
       # This will run a "full" or "intelligent" scan, logging new components in the Black Duck Hub server
